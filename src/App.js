@@ -1,25 +1,48 @@
-import logo from './logo.svg';
+import React, { Component } from 'react';
+import TitleImage from './components/TitleImage';
+import FilterBar from './components/FilterBar';
+import SeachBox from './components/SearchBox';
+// import Scroll from './components/Scroll';
+import CardList from './components/CardList';
 import './App.css';
+import { Pokedex } from 'pokeapi-js-wrapper';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      pokemons: [],
+    };
+  }
+  
+  componentDidMount() {
+    const pokedex = new Pokedex();
+    const ids = [1, 2, 3];
+    // const ids = [...Array(5).keys()];
+
+    pokedex.getPokemonByName(ids)
+    .then(pokemons => this.setState({ pokemons: pokemons}))
+  }
+
+  render() {
+    const { pokemons } = this.state;
+
+    if (!pokemons.length) {
+      return <h1>Loading</h1>
+    } else {
+        return (
+          <div className="flex flex-col items-center">
+            <TitleImage />
+            <FilterBar />
+            <SeachBox />
+            <CardList pokemons = {pokemons}/>
+          </div>
+        );
+    }
+    
+  }
+  
 }
 
 export default App;
