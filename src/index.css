@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .type-btn {
+    @apply py-2 px-4 text-white font-semibold rounded-lg shadow-md;
+  }
+}
+
 /* h1 {
   font-family: 'Pokemon Solid', sans-serif;
   color: #ffcb05;

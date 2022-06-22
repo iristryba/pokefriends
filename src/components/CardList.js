@@ -6,9 +6,9 @@ const CardList = ({pokemons}) => {
     // if (true) {
     //     throw new Error ('Noooooo');
     // }
-    
+    console.log(pokemons[0]);
     return (
-        <div className="flex flex-wrap gap-1">
+        <div className="flex flex-wrap justify-center gap-2 pt-2 px-4">
             {pokemons.map((pokemon) => {
                 return (
                     <Card
@@ -16,6 +16,8 @@ const CardList = ({pokemons}) => {
                         id={pokemon.id}
                         name={pokemon.name}
                         sprite={pokemon.sprites.front_default}
+                        weight={pokemon.weight}
+                        types={pokemon.types}
                     />);
                 }
             )}
