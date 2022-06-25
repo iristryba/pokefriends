@@ -4,7 +4,8 @@
 
 @layer components {
   .type-btn {
-    @apply py-2 px-4 text-white font-semibold rounded-lg shadow-md;
+    -webkit-text-stroke: 1px rgb(203 213 225) ;
+    @apply py-0.5 px-2 text-white font-semibold rounded-lg shadow-md shadow-slate-400 ;
   }
 }
 
@@ -12,4 +13,5 @@
   font-family: 'Pokemon Solid', sans-serif;
   color: #ffcb05;
   -webkit-text-stroke: 1px #3466af;
+  -webkit-text-stroke: 1px black;
 } */

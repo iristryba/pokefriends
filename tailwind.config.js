@@ -5,8 +5,10 @@ module.exports = {
   ],
   theme: {
     extend: {
-      aspectRatio: {
-        "card": "1/1",
+      backgroundImage: {
+        'hex-pattern': "url('/src/hex-pattern.png')",
+        'hex-pattern2': "https://www.toptal.com/designers/subtlepatterns/uploads/what-the-hex.png",
+        'cute-blue-pokemon': "url('/src/cute-blue-pokemon_katrinavt .jpg')"
       }
     },
   },

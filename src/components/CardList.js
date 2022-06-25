@@ -16,7 +16,6 @@ const CardList = ({pokemons}) => {
                         id={pokemon.id}
                         name={pokemon.name}
                         sprite={pokemon.sprites.front_default}
-                        weight={pokemon.weight}
                         types={pokemon.types}
                     />);
                 }
