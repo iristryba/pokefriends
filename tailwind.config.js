@@ -4,11 +4,15 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
+    
     extend: {
+      fontFamily: {
+        'sans': ['Lato', 'sans-serif'],
+      },
       backgroundImage: {
         'hex-pattern': "url('/src/hex-pattern.png')",
-        'hex-pattern2': "https://www.toptal.com/designers/subtlepatterns/uploads/what-the-hex.png",
-        'cute-blue-pokemon': "url('/src/cute-blue-pokemon_katrinavt .jpg')"
+        'cute-blue-pokemon': "url('/src/cute-blue-pokemon_katrinavt .jpg')",
+        'cute-dark-pokemon': "url('/src/cute-dark-pokemon.png')",
       }
     },
   },

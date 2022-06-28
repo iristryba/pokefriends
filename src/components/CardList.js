@@ -8,7 +8,7 @@ const CardList = ({pokemons}) => {
     // }
     console.log(pokemons[0]);
     return (
-        <div className="flex flex-wrap justify-center gap-2 pt-2 px-4">
+        <div className="flex flex-grow flex-wrap justify-center gap-2 pt-2 px-4">
             {pokemons.map((pokemon) => {
                 return (
                     <Card
