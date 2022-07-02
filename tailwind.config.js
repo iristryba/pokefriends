@@ -29,16 +29,16 @@ module.exports = {
         dragon: '#6F35FC',
         dark: '#705746',
         fairy: '#D685AD',
-        unknown: 'teal-200',
-        shadow: 'teal-600',
       },
       
       backgroundImage: {
         'hex-pattern': "url('/src/hex-pattern.png')",
         'cute-blue-pokemon': "url('/src/cute-blue-pokemon_katrinavt .jpg')",
-        'cute-dark-pokemon': "url('/src/cute-dark-pokemon.png')",
-        'cracked': "url('/src/cracked-glass.png')",
       },
     },
   },
+
+  plugins: [
+    require('tailwindcss-image-rendering')(),
+  ]
 }
