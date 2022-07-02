@@ -6,6 +6,10 @@ module.exports = {
   
   theme: {
     extend: {
+      animation: {
+        'spin-slow': 'spin 5s linear infinite'
+      },
+
       fontFamily: {
         'sans': ['Lato', 'sans-serif'],
       },
@@ -32,8 +36,7 @@ module.exports = {
       },
       
       backgroundImage: {
-        'hex-pattern': "url('/src/hex-pattern.png')",
-        'cute-blue-pokemon': "url('/src/cute-blue-pokemon_katrinavt .jpg')",
+        'cute-blue-pokemon': "url('/src/assets/cute-blue-pokemon_katrinavt .jpg')",
       },
     },
   },

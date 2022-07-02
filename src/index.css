@@ -10,6 +10,10 @@
     ;
   }
 
+  .loadImage {
+    @apply animate-spin-slow;
+  }
+
   .type-btn {
     @apply 
       pb-1 pt-0 px-2 

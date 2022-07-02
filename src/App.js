@@ -4,6 +4,7 @@ import SeachBox from './components/SearchBox';
 import CardList from './components/CardList';
 import './App.css';
 import { Pokedex } from 'pokeapi-js-wrapper';
+import LoadingScreen from './components/LoadingScreen';
 
 
 class App extends Component {
@@ -31,16 +32,23 @@ class App extends Component {
   render() {
     const { pokemons, searchfield } = this.state;
     const filteredPokemons = pokemons.filter(pokemon => {
-      return pokemon.name.toLowerCase().includes(searchfield.toLowerCase());
+      return (
+        (pokemon.name.toLowerCase().includes(searchfield.toLowerCase()))
+        || (pokemon.id.toString().includes(searchfield))
+      );
     })
 
     if (!pokemons.length) {
-      return <h1>Loading</h1>
+      return (
+        <LoadingScreen />
+      )
     } else {
         return (
-          <div className="flex flex-col items-center  ">
-            <TitleImage />
-            <SeachBox searchChange={ this.onSearchChange } />
+          <div className="flex flex-col items-center">
+            <header className="flex flex-col items-center" >
+              <TitleImage />
+              <SeachBox searchChange={ this.onSearchChange } />
+            </header>
             <CardList pokemons = {filteredPokemons}/>
           </div>
         );
