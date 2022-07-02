@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
 import TitleImage from './components/TitleImage';
-import FilterBar from './components/FilterBar';
 import SeachBox from './components/SearchBox';
-// import Scroll from './components/Scroll';
 import CardList from './components/CardList';
-import Footer from './components/Footer';
 import './App.css';
 import { Pokedex } from 'pokeapi-js-wrapper';
 
@@ -14,20 +11,28 @@ class App extends Component {
     super();
     this.state = {
       pokemons: [],
+      generation: 1,
+      searchfield: '',
     };
   }
   
   componentDidMount() {
     const pokedex = new Pokedex();
-    // const ids = [1, 2, 3];
-    const ids = [...Array(20).keys()].map(i => i + 152);
+    const ids = [...Array(151).keys()].map(i => i + 1);
 
     pokedex.getPokemonByName(ids)
     .then(pokemons => this.setState({ pokemons: pokemons}))
   }
 
+  onSearchChange = (event) => {
+    this.setState({ searchfield: event.target.value });
+  }
+
   render() {
-    const { pokemons } = this.state;
+    const { pokemons, searchfield } = this.state;
+    const filteredPokemons = pokemons.filter(pokemon => {
+      return pokemon.name.toLowerCase().includes(searchfield.toLowerCase());
+    })
 
     if (!pokemons.length) {
       return <h1>Loading</h1>
@@ -35,10 +40,8 @@ class App extends Component {
         return (
           <div className="flex flex-col items-center  ">
             <TitleImage />
-            <FilterBar />
-            <SeachBox />
-            <CardList pokemons = {pokemons}/>
-            <Footer />
+            <SeachBox searchChange={ this.onSearchChange } />
+            <CardList pokemons = {filteredPokemons}/>
           </div>
         );
     }
