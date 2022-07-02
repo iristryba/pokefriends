@@ -1,19 +1,54 @@
-import React from 'react';
+import React, {Component} from 'react';
 import Types from './Types'
 
-const Card = ({ id, name, sprite, types }) => {
-        return (
-        <div className="text-center text-xl font-sans rounded-xl border-[6px] border-black bg-white shadow-md shadow-slate-500 ">
-            <div className="flex justify-between">
-                <p className="ml-2 ">{name.charAt(0).toUpperCase() + name.slice(1)}</p> {/*capitalized name*/}
-                <p className="mr-2 text-base ">{id}</p>
-            </div>   
-            <div className="bg-amber-50 bg-hex-pattern bg-cover shadow-inner shadow-slate-600 mx-5 my-2">
-                <img className="sprite" width="144px" alt="robots bg-white" src={`${sprite}`} />
-            </div>
-            <Types types = {types} id = {id} />
-        </div>
-    )
-}
+// const Card = ({ id, name, sprite, types }) => {
+//     return (
+//         <div className="card" onClick={this.handleClick}>
+//         <div className="flex justify-between items-center">
+//         <p className="ml-2 ">{name.charAt(0).toUpperCase() + name.slice(1)}</p> {/*capitalized name*/}
+//         <p className="mr-2 text-base  ">{id}</p>
+//         </div>   
+//         <div className="bg-amber-50 bg-hex-pattern bg-cover shadow-inner shadow-slate-600 mx-5 my-2">
+//         <img className="sprite" width="144px" alt="robots bg-white" src={`${sprite}`} />
+//         </div>
+//         <Types types = {types} id = {id} />
+//         </div>
+//     )
+// }
 
+class Card extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {isToggleOn: false};
+    
+        // This binding is necessary to make `this` work in the callback
+        this.handleClick = this.handleClick.bind(this);
+    }
+
+    handleClick() {
+        this.setState(prevState => ({      
+            isToggleOn: !prevState.isToggleOn
+        }));
+        
+    }
+
+    render() {
+        const { id, name, sprite, types } = this.props;
+        const { isToggleOn } = this.state;
+
+        return (
+            <div onClick={this.handleClick} className={"card " + (isToggleOn ? "selected" : "") }>
+                <div className="flex justify-between items-center">
+                    <p className="ml-2 ">{name.charAt(0).toUpperCase() + name.slice(1)}</p> {/*capitalized name*/}
+                    <p className="mr-2 text-base  ">{id}</p>
+                </div>   
+                <div className="bg-amber-50 bg-hex-pattern bg-cover shadow-inner shadow-slate-600 mx-5 my-2">
+                    <img className="sprite" width="144px" alt="robots bg-white" src={`${sprite}`} />
+                </div>
+                <Types types = {types} id = {id} />
+            </div>
+        )
+    }
+}
+    
 export default Card;

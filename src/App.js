@@ -33,7 +33,7 @@ class App extends Component {
       return <h1>Loading</h1>
     } else {
         return (
-          <div className="flex flex-col items-center bg-cute-blue-pokemon bg-repeat h-max">
+          <div className="flex flex-col items-center  ">
             <TitleImage />
             <FilterBar />
             <SeachBox />

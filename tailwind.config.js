@@ -13,6 +13,7 @@ module.exports = {
         'hex-pattern': "url('/src/hex-pattern.png')",
         'cute-blue-pokemon': "url('/src/cute-blue-pokemon_katrinavt .jpg')",
         'cute-dark-pokemon': "url('/src/cute-dark-pokemon.png')",
+        'cracked': "url('/src/cracked-glass.png')",
       }
     },
   },

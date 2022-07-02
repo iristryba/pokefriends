@@ -26,7 +26,7 @@ const Types = ({ id, types }) => {
     }
 
     return (
-        <div className="flex justify-center gap-1 my-3 mx-2">
+        <div className="flex flex-wrap justify-center gap-1 my-3 mx-2">
             {types.map((type) => {
                 const classNames = "type-btn " + (typeColors[type.type.name]??"border-gray-500");
                 console.log(classNames);
