@@ -40,9 +40,9 @@ class Card extends Component {
             <div onClick={this.handleClick} className={"card " + (isToggleOn ? "selected" : "") }>
                 <div className="flex justify-between items-center">
                     <p className="ml-2 ">{name.charAt(0).toUpperCase() + name.slice(1)}</p> {/*capitalized name*/}
-                    <p className="mr-2 text-base  ">{id}</p>
+                    <p className="mr-2 text-base">{id}</p>
                 </div>   
-                <div className="bg-amber-50 bg-hex-pattern bg-cover shadow-inner shadow-slate-600 mx-5 my-2">
+                <div className="spriteContainer">
                     <img className="sprite" width="144px" alt="robots bg-white" src={`${sprite}`} />
                 </div>
                 <Types types = {types} id = {id} />
