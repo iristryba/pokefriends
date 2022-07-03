@@ -24,8 +24,8 @@ class Card extends Component {
         return (
             <div onClick={this.handleClick} className={"card " + (isToggleOn ? "selected" : "") }>
                 <div className="cardHeader">
-                    <p className="ml-2  ">{name.charAt(0).toUpperCase() + name.slice(1)}</p> {/*capitalized name*/}
-                    <p className="mr-2 text-sm md:text-lg ">{id}</p>
+                    <p className="ml-2">{name.charAt(0).toUpperCase() + name.slice(1)}</p> {/*capitalized name*/}
+                    <p className="mr-2">{id}</p>
                 </div>   
                 <div className="spriteContainer">
                     <img className="sprite " alt="robots bg-white" src={`${sprite}`} />

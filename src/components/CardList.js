@@ -9,7 +9,7 @@ const CardList = ({pokemons}) => {
     
     return (
         <main className="flex flex-col">
-            <div className="h-48 w-screen"></div>
+            <div className="h-32 md:h-48 w-screen"></div>
             <div className="flex flex-wrap justify-center gap-2 md:gap-4 pt-2 px-4">
                 {pokemons.map((pokemon) => {
                     return (
