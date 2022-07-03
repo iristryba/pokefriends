@@ -6,21 +6,24 @@ const CardList = ({pokemons}) => {
     // if (true) {
     //     throw new Error ('Noooooo');
     // }
-    console.log(pokemons[0]);
+    
     return (
-        <div className="flex flex-grow flex-wrap justify-center gap-4 pt-2 px-4">
-            {pokemons.map((pokemon) => {
-                return (
-                    <Card
-                        key={pokemon.id}
-                        id={pokemon.id}
-                        name={pokemon.name}
-                        sprite={pokemon.sprites.front_default}
-                        types={pokemon.types}
-                    />);
-                }
-            )}
-        </div>
+        <main className="flex flex-col">
+            <div className="h-48 w-screen z-40 "></div>
+            <div className="flex flex-wrap justify-center gap-4 pt-2 px-4">
+                {pokemons.map((pokemon) => {
+                    return (
+                        <Card
+                            key={pokemon.id}
+                            id={pokemon.id}
+                            name={pokemon.name}
+                            sprite={pokemon.sprites.front_default}
+                            types={pokemon.types}
+                        />);
+                    }
+                )}
+            </div>
+        </main>
     )
 }
     

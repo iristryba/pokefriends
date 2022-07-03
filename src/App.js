@@ -19,7 +19,7 @@ class App extends Component {
   
   componentDidMount() {
     const pokedex = new Pokedex();
-    const ids = [...Array(151).keys()].map(i => i + 1);
+    const ids = [...Array(30).keys()].map(i => i + 1);
 
     pokedex.getPokemonByName(ids)
     .then(pokemons => this.setState({ pokemons: pokemons}))
@@ -44,8 +44,8 @@ class App extends Component {
       )
     } else {
         return (
-          <div className="flex flex-col items-center">
-            <header className="flex flex-col items-center" >
+          <div className="flex flex-row">
+            <header className="fixed h-48 w-screen flex flex-col justify-center items-center z-50 bg-cute-blue-pokemon bg-repeat border-b-2 border-solid border-white" >
               <TitleImage />
               <SeachBox searchChange={ this.onSearchChange } />
             </header>
