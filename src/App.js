@@ -45,7 +45,7 @@ class App extends Component {
     } else {
         return (
           <div className="flex flex-row">
-            <header className="fixed h-48 w-screen flex flex-col justify-center items-center z-50 bg-cute-blue-pokemon bg-repeat border-b-2 border-solid border-white" >
+            <header>
               <TitleImage />
               <SeachBox searchChange={ this.onSearchChange } />
             </header>

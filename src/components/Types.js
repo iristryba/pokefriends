@@ -25,7 +25,7 @@ const Types = ({ id, types }) => {
     }
 
     return (
-        <div className="flex flex-wrap justify-center gap-1 my-3 mx-2">
+        <div className="typesContainer">
             {types.map((type) => {
                 return (
                     <div 
