@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/pokefriends/static/css/main.b6c95643.css",
-    "main.js": "/pokefriends/static/js/main.18856409.js",
+    "main.css": "/pokefriends/static/css/main.4f1b1eea.css",
+    "main.js": "/pokefriends/static/js/main.e7bf5dd6.js",
     "static/js/787.8ea8e5da.chunk.js": "/pokefriends/static/js/787.8ea8e5da.chunk.js",
     "static/media/pokeball.jpg": "/pokefriends/static/media/pokeball.a5087cb2d867961cbd76.jpg",
     "index.html": "/pokefriends/index.html",
-    "main.b6c95643.css.map": "/pokefriends/static/css/main.b6c95643.css.map",
-    "main.18856409.js.map": "/pokefriends/static/js/main.18856409.js.map",
+    "main.4f1b1eea.css.map": "/pokefriends/static/css/main.4f1b1eea.css.map",
+    "main.e7bf5dd6.js.map": "/pokefriends/static/js/main.e7bf5dd6.js.map",
     "787.8ea8e5da.chunk.js.map": "/pokefriends/static/js/787.8ea8e5da.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b6c95643.css",
-    "static/js/main.18856409.js"
+    "static/css/main.4f1b1eea.css",
+    "static/js/main.e7bf5dd6.js"
   ]
 }
