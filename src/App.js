@@ -43,7 +43,7 @@ class App extends Component {
       )
     } else {
         return (
-          <div className="flex flex-row">
+          <div>
             <Header searchChange={ this.onSearchChange }/>
             <CardList pokemons = {filteredPokemons}/>
           </div>

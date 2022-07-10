@@ -37,7 +37,7 @@ const Header = ({searchChange}) => {
     // console.log("Shrunk: " + isShrunk);
 
     return (
-        <header className= {isShrunk? "shrunk" : ""}>
+        <header className={`${isShrunk? "shrunk" : ""}`} >
               <TitleImage isShrunk = {isShrunk} />
               <SearchBox searchChange = {searchChange} isShrunk = {isShrunk} />
         </header>
