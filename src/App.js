@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
-import TitleImage from './components/TitleImage';
-import SeachBox from './components/SearchBox';
 import CardList from './components/CardList';
 import './App.css';
 import { Pokedex } from 'pokeapi-js-wrapper';
 import LoadingScreen from './components/LoadingScreen';
+import Header from './components/Header';
 
 
 class App extends Component {
@@ -45,10 +44,7 @@ class App extends Component {
     } else {
         return (
           <div className="flex flex-row">
-            <header>
-              <TitleImage />
-              <SeachBox searchChange={ this.onSearchChange } />
-            </header>
+            <Header searchChange={ this.onSearchChange }/>
             <CardList pokemons = {filteredPokemons}/>
           </div>
         );

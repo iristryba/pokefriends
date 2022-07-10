@@ -10,9 +10,14 @@
     ;
   }
 
+  header.shrunk {
+    @apply    
+      flex-row
+  }
+
   header {
     @apply 
-      fixed h-32 md:h-48 w-screen z-50 
+      fixed w-screen z-50 
       flex flex-col justify-center items-center 
       bg-cute-blue-pokemon bg-repeat 
       border-b-2 border-solid border-black outline-white/70 outline-4 outline
